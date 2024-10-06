@@ -17,7 +17,7 @@ You can install Prerequisites by doing these steps.
 ## Installation
 Follow these steps to install and run the Reddit clone app on your local machine:
 
-1) Clone this repository to your local machine: ``
+1) Clone this repository to your local machine: `https://github.com/fauzia789/DevOps.git`
 2) Navigate to the project directory: `cd reddit-clone-k8s-ingress`
 3) Build the Docker image for the Reddit clone app: `docker build -t reddit-clone-app .`
 4) Deploy the app to Kubernetes: `kubectl apply -f deployment.yaml`
@@ -45,8 +45,8 @@ Pre Requisites :
 
 Installation Steps 
 ```sh
-helm repo add stable https://charts.helm.sh/stable
-helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo add stable 
+helm repo add prometheus-community
 helm search repo prometheus-community
 kubectl create namespace prometheus
 helm install stable prometheus-community/kube-prometheus-stack -n prometheus
@@ -74,29 +74,6 @@ Access Grafana Dashboard
 UserName: admin 
 Password: prom-operator
 ```
-
-
-For creating a dashboard to monitor the cluster:
-
-```sh
-Click '+' button on left panel and select ‘Import’.
-Enter 12740 dashboard id under Grafana.com Dashboard.
-Click ‘Load’.
-Select ‘Prometheus’ as the endpoint under prometheus data sources drop down.
-Click ‘Import’.
-```
-
-
-### Images For reference
-
-
-
-<img width="1396" alt="image" src="https://user-images.githubusercontent.com/110477025/227587553-7163c709-85cf-4e23-a00b-823b08758859.png">
-
-
-
-<img width="1400" alt="image" src="https://user-images.githubusercontent.com/110477025/227587788-06ce33dd-3a09-4f36-9bbd-aff0925615ed.png">
-
 
 
 
